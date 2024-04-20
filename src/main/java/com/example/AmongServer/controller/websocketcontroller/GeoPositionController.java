@@ -2,6 +2,7 @@ package com.example.AmongServer.controller.websocketcontroller;
 
 
 import com.example.AmongServer.domain.GeoPosition;
+import lombok.AllArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,12 +13,10 @@ import static com.example.AmongServer.constant.Const.*;
 
 @RestController
 @RequestMapping(LINK_CHAT)
+@AllArgsConstructor
 public class GeoPositionController {
     private final SimpMessagingTemplate simpleMessageTemplate;
 
-    public GeoPositionController(SimpMessagingTemplate simpleMessageTemplate) {
-        this.simpleMessageTemplate = simpleMessageTemplate;
-    }
 
     @MessageMapping("/sock")
     public void geoPosSocket(GeoPosition res) {

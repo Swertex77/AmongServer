@@ -9,7 +9,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "user")
+@Table(name = "start_coordinates")
 public class StartCoordinates {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +22,7 @@ public class StartCoordinates {
     private double longitude;
 
     @Column (name = "completed")
-    private boolean completed
-            ;
+    private boolean completed;
 
     public StartCoordinates(double latitude, double longitude, boolean completed) {
         this.latitude = latitude;
