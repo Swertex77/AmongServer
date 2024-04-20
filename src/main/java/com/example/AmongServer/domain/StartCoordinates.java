@@ -1,6 +1,7 @@
 package com.example.AmongServer.domain;
 
 //import jakarta.persistence.*;
+import com.example.AmongServer.service.impl.StartCoordinatesService;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "user")
+@EntityListeners(StartCoordinatesService.class)
 public class StartCoordinates {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
