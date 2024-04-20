@@ -1,4 +1,4 @@
-package com.example.AmongServer.testsocket;
+package com.example.AmongServer.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
