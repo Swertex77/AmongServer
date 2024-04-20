@@ -1,6 +1,6 @@
 //package com.example.AmongServer.invalid;
 //
-//import com.example.AmongServer.domain.StartCoordinates;
+//import com.example.AmongServer.domain.entity.StartCoordinates;
 //import org.springframework.messaging.handler.annotation.MessageMapping;
 //import org.springframework.messaging.handler.annotation.SendTo;
 //import org.springframework.stereotype.Controller;

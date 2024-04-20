@@ -1,6 +1,7 @@
-package com.example.AmongServer.testsocket;
+package com.example.AmongServer.controller.websocketcontroller;
 
 
+import com.example.AmongServer.domain.GeoPosition;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;

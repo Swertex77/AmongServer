@@ -1,6 +1,6 @@
 //package com.example.AmongServer.invalid;
 //
-//import com.example.AmongServer.domain.StartCoordinates;
+//import com.example.AmongServer.domain.entity.StartCoordinates;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.messaging.simp.SimpMessagingTemplate;
 //import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.example.AmongServer.service;
 
-import com.example.AmongServer.domain.StartCoordinates;
+import com.example.AmongServer.domain.entity.StartCoordinates;
 
 import java.util.List;
 

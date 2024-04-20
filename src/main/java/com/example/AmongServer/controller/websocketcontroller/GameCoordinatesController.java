@@ -1,6 +1,6 @@
-package com.example.AmongServer.gamecoordinates;
+package com.example.AmongServer.controller.websocketcontroller;
 
-import com.example.AmongServer.domain.StartCoordinates;
+import com.example.AmongServer.domain.entity.StartCoordinates;
 import com.example.AmongServer.reposirory.StartCoordinatesRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;

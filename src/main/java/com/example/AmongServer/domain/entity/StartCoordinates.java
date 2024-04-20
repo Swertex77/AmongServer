@@ -1,4 +1,4 @@
-package com.example.AmongServer.domain;
+package com.example.AmongServer.domain.entity;
 
 import lombok.*;
 

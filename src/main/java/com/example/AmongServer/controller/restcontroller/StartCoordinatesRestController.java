@@ -1,8 +1,8 @@
-package com.example.AmongServer.controller;
+package com.example.AmongServer.controller.restcontroller;
 
 
 
-import com.example.AmongServer.domain.StartCoordinates;
+import com.example.AmongServer.domain.entity.StartCoordinates;
 import com.example.AmongServer.service.StartCoordinatesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class StartCoordinatesController {
+public class StartCoordinatesRestController {
     private final StartCoordinatesService service;
 
     @Autowired
-    public StartCoordinatesController(StartCoordinatesService service, SimpMessagingTemplate simpleMessageTemplate) {
+    public StartCoordinatesRestController(StartCoordinatesService service, SimpMessagingTemplate simpleMessageTemplate) {
         this.service = service;
     }
 

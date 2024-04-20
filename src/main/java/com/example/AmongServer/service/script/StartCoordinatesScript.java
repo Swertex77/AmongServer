@@ -1,6 +1,6 @@
 package com.example.AmongServer.service.script;
 
-import com.example.AmongServer.domain.StartCoordinates;
+import com.example.AmongServer.domain.entity.StartCoordinates;
 import com.example.AmongServer.reposirory.StartCoordinatesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
