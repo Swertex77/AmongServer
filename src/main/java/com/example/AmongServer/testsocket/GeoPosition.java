@@ -6,14 +6,22 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public class GeoPosition {
     private long id;
 
-    private double longitude;
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
 
     private double latitude;
 
-    public GeoPosition(long id, double longitude, double latitude) {
+    private double longitude;
+
+    public GeoPosition(long id, double latitude, double longitude) {
         this.id = id;
-        this.longitude = longitude;
         this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public long getId() {
@@ -22,5 +30,13 @@ public class GeoPosition {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 }
