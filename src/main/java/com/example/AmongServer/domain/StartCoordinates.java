@@ -15,14 +15,19 @@ public class StartCoordinates {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column (name = "longitude")
+    @Column (name = "latitude")
     private double latitude;
 
-    @Column (name = "latitude")
+    @Column (name = "longitude")
     private double longitude;
 
-    public StartCoordinates(double latitude, double longitude) {
+    @Column (name = "completed")
+    private boolean completed
+            ;
+
+    public StartCoordinates(double latitude, double longitude, boolean completed) {
         this.latitude = latitude;
         this.longitude = longitude;
+        this.completed = completed;
     }
 }

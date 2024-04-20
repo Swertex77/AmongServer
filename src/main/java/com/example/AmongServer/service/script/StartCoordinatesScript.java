@@ -21,11 +21,16 @@ public class StartCoordinatesScript implements CommandLineRunner {
     }
 
     public void addStartingCoordinates() {
-        coordinatesList.add(new StartCoordinates(55.686896, 37.504162));
-        coordinatesList.add(new StartCoordinates(55.686916, 37.496937));
-        coordinatesList.add(new StartCoordinates(55.679843, 37.507568));
-        coordinatesList.add(new StartCoordinates(55.690882, 37.504051));
-        coordinatesList.add(new StartCoordinates(55.683772, 37.497699));
+        coordinatesList.add(new StartCoordinates(55.686896, 37.504162, false));
+        coordinatesList.add(new StartCoordinates(55.686916, 37.496937, false));
+        coordinatesList.add(new StartCoordinates(55.679843, 37.507568, false));
+        coordinatesList.add(new StartCoordinates(55.690882, 37.504051, false));
+        coordinatesList.add(new StartCoordinates(55.683772, 37.497699, false));
+        coordinatesList.add(new StartCoordinates(55.682802, 37.502332, false));
+        coordinatesList.add(new StartCoordinates(55.684439, 37.505973, false));
+        coordinatesList.add(new StartCoordinates(55.679527, 37.503378, false));
+        coordinatesList.add(new StartCoordinates(55.688928, 37.500681, false));
+        coordinatesList.add(new StartCoordinates(55.684419, 37.502729, false));
     }
 
     @Override

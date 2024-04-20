@@ -13,13 +13,6 @@ public class GemaCoordinates {
     private double latitude;
     private double longitude;
     private boolean condition;
-
-  /*  public GemaCoordinates(double latitude, double longitude) {
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }*/
-
-
     public GemaCoordinates(double latitude, double longitude, boolean condition) {
         this.latitude = latitude;
         this.longitude = longitude;
