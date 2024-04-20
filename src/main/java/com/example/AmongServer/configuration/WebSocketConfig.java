@@ -7,17 +7,16 @@ import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBr
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
-@Configuration
-@EnableWebSocketMessageBroker
-public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
-    @Override
-    public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/start_coordinates");
-    }
 
-    @Override
-    public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/topic"); // Включаем простой брокер сообщений для каналов "/topic"
-        config.setApplicationDestinationPrefixes("/app"); // Префикс для обработки сообщений в приложении
-    }
-}
+//public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+//    @Override
+//    public void registerStompEndpoints(StompEndpointRegistry registry) {
+//        registry.addEndpoint("/start_coordinates");
+//    }
+//
+//    @Override
+//    public void configureMessageBroker(MessageBrokerRegistry config) {
+//        config.enableSimpleBroker("/topic"); // Включаем простой брокер сообщений для каналов "/topic"
+//        config.setApplicationDestinationPrefixes("/app"); // Префикс для обработки сообщений в приложении
+//    }
+//}
