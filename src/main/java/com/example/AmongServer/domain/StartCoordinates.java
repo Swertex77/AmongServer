@@ -21,4 +21,9 @@ public class StartCoordinates {
 
     @Column (name = "latitude")
     private double latitude;
+
+    public StartCoordinates(double longitude, double latitude) {
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
 }

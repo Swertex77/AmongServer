@@ -1,4 +1,4 @@
-package com.example.AmongServer.script;
+package com.example.AmongServer.service.script;
 
 import com.example.AmongServer.domain.StartCoordinates;
 import com.example.AmongServer.reposirory.StartCoordinatesRepository;
@@ -21,17 +21,16 @@ public class StartCoordinatesScript implements CommandLineRunner {
     }
 
     public void addStartingCoordinates() {
-        coordinatesList.add(new StartCoordinates(1, 55.686896, 37.504162));
-        coordinatesList.add(new StartCoordinates(2, 55.686916, 37.496937));
-        coordinatesList.add(new StartCoordinates(3, 55.679843, 37.507568));
-        coordinatesList.add(new StartCoordinates(4, 55.690882, 37.504051));
-        coordinatesList.add(new StartCoordinates(5, 55.683772, 37.497699));
-
-        repository.saveAll(coordinatesList);
+        coordinatesList.add(new StartCoordinates(55.686896, 37.504162));
+        coordinatesList.add(new StartCoordinates(55.686916, 37.496937));
+        coordinatesList.add(new StartCoordinates(55.679843, 37.507568));
+        coordinatesList.add(new StartCoordinates(55.690882, 37.504051));
+        coordinatesList.add(new StartCoordinates(55.683772, 37.497699));
     }
 
     @Override
     public void run(String... args) {
         addStartingCoordinates();
+        repository.saveAll(coordinatesList);
     }
 }
