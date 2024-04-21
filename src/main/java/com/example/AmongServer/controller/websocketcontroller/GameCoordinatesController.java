@@ -2,6 +2,7 @@ package com.example.AmongServer.controller.websocketcontroller;
 
 import com.example.AmongServer.domain.entity.StartCoordinates;
 import com.example.AmongServer.reposirory.StartCoordinatesRepository;
+import com.example.AmongServer.service.StartCoordinatesService;
 import lombok.AllArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -19,26 +20,22 @@ import static com.example.AmongServer.constant.Const.*;
 @AllArgsConstructor
 public class GameCoordinatesController {
     private final SimpMessagingTemplate simpleMessageTemplate;
-    private final StartCoordinatesRepository startCoordinatesRepository;
+    private final StartCoordinatesService service;
 
     @MessageMapping("/coordinates")
     public void coordinatesSocket(StartCoordinates coordinates) {
         System.out.println("34 id=" + coordinates.getId() + " x=" + coordinates.getLatitude() + " y=" + coordinates.getLongitude() + "sfd");
         if (coordinates.isCompleted()) {
-            // Находим объект StartCoordinates по его id
-            Optional<StartCoordinates> optionalCoordinates = startCoordinatesRepository.findById(coordinates.getId());
+            StartCoordinates existingCoordinates = service.getById(coordinates.getId());
 
-            // Если объект найден
-            if (optionalCoordinates.isPresent()) {
-                StartCoordinates existingCoordinates = optionalCoordinates.get();
+            // Обновляем значение поля coordinates
+            existingCoordinates.setCompleted(true);
 
-                // Обновляем значение поля coordinates
-                existingCoordinates.setCompleted(true);
+            // Сохраняем изменения в базе данных
+            service.add(existingCoordinates);
 
-                // Сохраняем изменения в базе данных
-                startCoordinatesRepository.save(existingCoordinates);
-            }
-            List<StartCoordinates> startCoordinatesList = startCoordinatesRepository.findAll();
+
+            List<StartCoordinates> startCoordinatesList = service.getAll();;
             List<StartCoordinates> trueConditionCoordinates = new ArrayList<>();
 
             for (StartCoordinates startCoordinates : startCoordinatesList) {
