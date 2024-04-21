@@ -1,6 +1,6 @@
-package com.example.AmongServer.reposirory;
+package com.example.amongserver.reposirory;
 
-import com.example.AmongServer.domain.entity.StartCoordinates;
+import com.example.amongserver.domain.entity.StartCoordinates;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,12 +1,9 @@
-package com.example.AmongServer.service.impl;
+package com.example.amongserver.service.impl;
 
-import com.example.AmongServer.domain.entity.StartCoordinates;
-import com.example.AmongServer.domain.entity.User;
-import com.example.AmongServer.reposirory.StartCoordinatesRepository;
-import com.example.AmongServer.reposirory.UserRepository;
-import com.example.AmongServer.service.UserService;
+import com.example.amongserver.domain.entity.User;
+import com.example.amongserver.reposirory.UserRepository;
+import com.example.amongserver.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.example.AmongServer.controller.websocketcontroller;
+package com.example.amongserver.controller.websocketcontroller;
 
 
-import com.example.AmongServer.domain.GeoPosition;
+import com.example.amongserver.domain.GeoPosition;
 import lombok.AllArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import static com.example.AmongServer.constant.Const.*;
+import static com.example.amongserver.constant.Const.*;
 
 @RestController
 @RequestMapping(LINK_CHAT)

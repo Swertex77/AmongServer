@@ -1,6 +1,6 @@
-package com.example.AmongServer.service;
+package com.example.amongserver.service;
 
-import com.example.AmongServer.domain.entity.User;
+import com.example.amongserver.domain.entity.User;
 
 import java.util.List;
 

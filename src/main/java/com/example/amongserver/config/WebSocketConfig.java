@@ -1,4 +1,4 @@
-package com.example.AmongServer.config;
+package com.example.amongserver.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -6,8 +6,8 @@ import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBr
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
-import static com.example.AmongServer.constant.Const.LINK_CHAT;
-import static com.example.AmongServer.constant.Const.TOPIC;
+import static com.example.amongserver.constant.Const.LINK_CHAT;
+import static com.example.amongserver.constant.Const.TOPIC;
 
 @Configuration
 @EnableWebSocketMessageBroker

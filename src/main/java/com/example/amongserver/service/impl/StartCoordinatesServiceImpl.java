@@ -1,8 +1,8 @@
-package com.example.AmongServer.service.impl;
+package com.example.amongserver.service.impl;
 
-import com.example.AmongServer.domain.entity.StartCoordinates;
-import com.example.AmongServer.reposirory.StartCoordinatesRepository;
-import com.example.AmongServer.service.StartCoordinatesService;
+import com.example.amongserver.domain.entity.StartCoordinates;
+import com.example.amongserver.reposirory.StartCoordinatesRepository;
+import com.example.amongserver.service.StartCoordinatesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

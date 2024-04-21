@@ -1,4 +1,4 @@
-package com.example.AmongServer.domain.entity;
+package com.example.amongserver.domain.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.example.AmongServer;
+package com.example.amongserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

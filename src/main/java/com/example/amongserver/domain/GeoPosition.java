@@ -1,4 +1,4 @@
-package com.example.AmongServer.domain;
+package com.example.amongserver.domain;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

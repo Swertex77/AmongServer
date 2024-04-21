@@ -1,9 +1,9 @@
-package com.example.AmongServer.controller.websocketcontroller;
+package com.example.amongserver.controller.websocketcontroller;
 
 
 
-import com.example.AmongServer.domain.entity.User;
-import com.example.AmongServer.service.UserService;
+import com.example.amongserver.domain.entity.User;
+import com.example.amongserver.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 
-import static com.example.AmongServer.constant.Const.LINK_CHAT;
-import static com.example.AmongServer.constant.Const.USER_TOPIC;
+import static com.example.amongserver.constant.Const.LINK_CHAT;
+import static com.example.amongserver.constant.Const.USER_TOPIC;
 
 @RestController
 @RequestMapping(LINK_CHAT)

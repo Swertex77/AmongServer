@@ -1,9 +1,9 @@
-package com.example.AmongServer.controller.restcontroller;
+package com.example.amongserver.controller.restcontroller;
 
 
 
-import com.example.AmongServer.domain.entity.StartCoordinates;
-import com.example.AmongServer.service.StartCoordinatesService;
+import com.example.amongserver.domain.entity.StartCoordinates;
+import com.example.amongserver.service.StartCoordinatesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
@@ -31,7 +31,4 @@ public class StartCoordinatesRestController {
     public StartCoordinates getById(@PathVariable long id) {
         return service.getById(id);
     }
-
-
-
 }

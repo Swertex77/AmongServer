@@ -1,4 +1,4 @@
-package com.example.AmongServer.constant;
+package com.example.amongserver.constant;
 
 public class Const {
 

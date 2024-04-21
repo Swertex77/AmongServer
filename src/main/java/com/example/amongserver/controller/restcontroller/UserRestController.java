@@ -1,7 +1,7 @@
-package com.example.AmongServer.controller.restcontroller;
+package com.example.amongserver.controller.restcontroller;
 
-import com.example.AmongServer.domain.entity.User;
-import com.example.AmongServer.service.UserService;
+import com.example.amongserver.domain.entity.User;
+import com.example.amongserver.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
