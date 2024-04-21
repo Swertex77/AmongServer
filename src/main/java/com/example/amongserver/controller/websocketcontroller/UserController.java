@@ -3,6 +3,7 @@ package com.example.amongserver.controller.websocketcontroller;
 
 
 import com.example.amongserver.domain.entity.User;
+import com.example.amongserver.dto.GameStateDto;
 import com.example.amongserver.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -25,6 +26,7 @@ public class UserController {
     @MessageMapping("/user")
     public void geoPosSocket(User user) {
         System.out.println("User");
+        System.out.println(user.isReady());
         User localUser = service.getById(user.getId());
         localUser.setReady(user.isReady());
         service.add(localUser);
@@ -41,8 +43,7 @@ public class UserController {
                 break;
             }
         }
-        // TODO: 4 players
-        if (!isAllReady || userList.size() < 2) {
+        if (!isAllReady || userList.size() < 4) {
             sendMessageToUser(userList);
         } else {
             createRole(userList);
@@ -57,6 +58,7 @@ public class UserController {
     }
     private void sendMessageToUser(List<User> userList) {
         // если сообщение отправляется в общий чат
-        simpleMessageTemplate.convertAndSend(USER_TOPIC, userList);
+
+        simpleMessageTemplate.convertAndSend(USER_TOPIC, new GameStateDto(1, false, false, userList));
     }
 }
