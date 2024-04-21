@@ -10,4 +10,5 @@ public interface UserService {
     User add(User user);
     List<User> getAll();
     User getById(long id);
+    List<User> addAll (List<User> userList);
 }

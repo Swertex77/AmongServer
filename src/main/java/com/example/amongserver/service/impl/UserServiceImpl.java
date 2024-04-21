@@ -1,6 +1,6 @@
 package com.example.amongserver.service.impl;
 
-import com.example.amongserver.domain.entity.StartCoordinates;
+
 import com.example.amongserver.domain.entity.User;
 import com.example.amongserver.dto.GameStateDto;
 import com.example.amongserver.reposirory.UserRepository;
@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User add(User user) {
         user.setReady(false);
-        user.setImposter(false);
+        user.setIsImposter(null);
         return repository.save(user);
     }
     @Override
@@ -40,5 +40,10 @@ public class UserServiceImpl implements UserService {
         Optional<User> user = repository.findById(id);
         if(!user.isPresent()) throw new RuntimeException("User with ID " + id + " not found");
         return user.get();
+    }
+
+    @Override
+    public List<User> addAll(List<User> userList) {
+        return repository.saveAll(userList);
     }
 }

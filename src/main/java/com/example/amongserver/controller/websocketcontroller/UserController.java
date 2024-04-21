@@ -28,14 +28,23 @@ public class UserController {
         System.out.println("User");
         System.out.println(user.isReady());
         User localUser = service.getById(user.getId());
+        List<User> userList = service.getAll();
+        for (User i : userList) {
+            //i.setGameState(1);
+            if (i.getId()==user.getId()) {
+                i.setReady(user.isReady());
+            }
+        }
         localUser.setReady(user.isReady());
-        service.add(localUser);
-        allReady();
+        //service.addAll(userList);
+
+        allReady(service.addAll(userList));
     }
 
-    private void allReady() {
-        List<User> userList = service.getAll();
-
+    private void allReady(List<User> userList) {
+        for (User usrList : userList) {
+            System.out.println(usrList.isReady());
+        }
         boolean isAllReady = true;
         for (User user : userList) {
             if (!user.isReady()) {
@@ -43,18 +52,22 @@ public class UserController {
                 break;
             }
         }
-        if (!isAllReady || userList.size() < 4) {
+        if (!isAllReady /*|| userList.size() < 3*/) {
             sendMessageToUser(userList);
         } else {
             createRole(userList);
         }
     }
     private void createRole(List<User> userList) {
+        for (User localuser : userList) {
+            localuser.setIsImposter(false);
+        }
         if (!userList.isEmpty()) {
             int impostorIndex = (int) (Math.random() * userList.size());
-            userList.get(impostorIndex).setImposter(true);
+            userList.get(impostorIndex).setIsImposter(true);
             sendMessageToUser(userList);
         }
+        service.addAll(userList);
     }
     private void sendMessageToUser(List<User> userList) {
         // если сообщение отправляется в общий чат

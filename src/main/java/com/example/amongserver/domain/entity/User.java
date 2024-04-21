@@ -25,13 +25,13 @@ public class User {
     private boolean isReady;
 
     @Column (name = "is_imposter")
-    private boolean isImposter;
+    private Boolean isImposter;
 
     @ManyToOne
     @JoinColumn(name = "game_state_id")
     private GameState gameState;
 
-    public User(String login, boolean isReady, boolean isImposter) {
+    public User(String login, boolean isReady, Boolean isImposter) {
         this.login = login;
         this.isReady = isReady;
         this.isImposter = isImposter;
