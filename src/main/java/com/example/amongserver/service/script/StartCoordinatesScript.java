@@ -31,6 +31,7 @@ public class StartCoordinatesScript implements CommandLineRunner {
         coordinatesList.add(new StartCoordinates(55.679527, 37.503378, false));
         coordinatesList.add(new StartCoordinates(55.688928, 37.500681, false));
         coordinatesList.add(new StartCoordinates(55.684419, 37.502729, false));
+        coordinatesList.add(new StartCoordinates(55.8010271,37.8057306, false));
     }
 
     @Override

@@ -14,7 +14,7 @@ import java.util.List;
 @Component
 public class GameOneStartScript implements CommandLineRunner {
     private final GemaStateRepository repository;
-    private GameState gemaState ;
+    private static GameState gemaState;
 
     @Autowired
     public GameOneStartScript(GemaStateRepository repository) {

@@ -25,7 +25,7 @@ public class GameState {
     @Column(name = "is_game_pause")
     private boolean isGamePause;
 
-    @OneToMany(mappedBy = "gameState")
+    @OneToMany(mappedBy = "game_state")
     private List<User> users;
 
     public GameState(boolean isGameStart, boolean isGamePause, List<User> users) {
